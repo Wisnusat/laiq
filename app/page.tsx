@@ -13,7 +13,7 @@ export default function HomePage() {
       <ProblemSection />
       <WhyLaiqSection />
       <BackedBySection />
-      <Footer />
+      <Footer isTransparent={false} />
     </main>
   )
 }

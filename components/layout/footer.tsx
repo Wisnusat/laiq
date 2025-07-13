@@ -1,9 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 
-export default function Footer() {
+type FooterProps = {
+  isTransparent: boolean;
+}
+
+export default function Footer({ isTransparent }: FooterProps) {
   return (
-    <footer className="bg-[#054d90] text-white py-12">
+    <footer className={`${!isTransparent ? "bg-[#054d90]" : "bg-transparent"} text-white py-12`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo */}
